@@ -1,0 +1,79 @@
+
+@-webkit-keyframes rotating {
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+.rotating {
+	-webkit-animation: rotating 2s linear infinite;
+}
+
+.check-connectivity-button {
+	display: inline-block;
+	text-decoration: none;
+	font-size: 13px;
+	line-height: 2.15384615;
+	min-height: 30px;
+	margin: 0;
+	padding: 0 10px;
+	cursor: pointer;
+	border-width: 1px;
+	border-style: solid;
+	-webkit-appearance: none;
+	border-radius: 3px;
+	white-space: nowrap;
+	box-sizing: border-box;
+
+	border-color: #f1b52a;
+	background-color: #f1b52a;
+	color: #fff;
+
+	i {
+		line-height: 20px;
+		width: 20px;
+		height: 20px;
+		margin-right: 0.2rem;
+		margin-top: 4px;
+		display: none;
+		&.show {
+			display: inline-block;
+		}
+	}
+}
+
+input {
+	&.invalid {
+		border-color: #ff3333;
+	}
+}
+
+.check-connectivity-message {
+	padding: 0.5rem;
+	border: 1px solid #333;
+	color: #333;
+	background-color: #fff;
+	margin-bottom: 0.5rem;
+	border-radius: 3px;
+	max-width: 380px;
+	display: none;
+	&.error-message {
+		color: #ff3333;
+		border-color: #ff3333;
+	}
+	&.success-message {
+		color: #27ae60;
+		border-color: #27ae60;
+	}
+
+	&.show {
+		display: block;
+	}
+
+	i {
+		margin-right: 0.4rem;
+	}
+}
